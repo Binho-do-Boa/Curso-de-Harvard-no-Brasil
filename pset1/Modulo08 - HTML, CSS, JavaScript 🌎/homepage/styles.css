@@ -1,0 +1,29 @@
+/* styles.css */
+
+/* Alterar a cor de fundo do body */
+body {
+  background-color: #f8f9fa;
+}
+
+/* Estilizar um cabeçalho */
+h1 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Adicionar margem ao redor de um botão */
+.btn {
+  margin: 10px;
+}
+
+/* Alterar a cor do texto de links */
+a {
+  color: #007bff;
+}
+
+/* Estilizar uma classe personalizada */
+.my-custom-class {
+  font-weight: bold;
+  text-decoration: underline;
+}

@@ -1,0 +1,39 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+h1, h2, h3 {
+  color: #333;
+}
+
+button {
+  display: block;
+  margin-bottom: 10px;
+  padding: 8px 16px;
+  background-color: #eee;
+  border: none;
+  cursor: pointer;
+}
+
+button.correct {
+  background-color: green;
+  color: #fff;
+}
+
+button.incorrect {
+  background-color: red;
+  color: #fff;
+}
+
+input[type="text"] {
+  padding: 8px;
+  width: 200px;
+}
+
+.correct-answer {
+  color: green;
+}
+
+.incorrect-answer {
+  color: red;
+}
