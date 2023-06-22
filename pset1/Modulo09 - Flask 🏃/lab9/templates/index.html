@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Birthdays</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Birthdays</h1>
+
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Birthday</th>
+        </tr>
+        {% for birthday in birthdays %}
+        <tr>
+            <td>{{ birthday[1] }}</td>
+            <td>{{ birthday[2] }}/{{ birthday[3] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <h2>Add a Birthday</h2>
+
+    <form action="/" method="post">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" required>
+        <br>
+        <label for="month">Month:</label>
+        <input type="number" name="month" id="month" min="1" max="12" required>
+        <br>
+        <label for="day">Day:</label>
+        <input type="number" name="day" id="day" min="1" max="31" required>
+        <br>
+        <input type="submit" value="Add Birthday">
+    </form>
+</body>
+</html>

@@ -1,0 +1,28 @@
+Idade de Fernanda
+
+#include <stdio.h>
+
+int main() {
+    int idade_cibele, idade_fernanda, idade_celeste;
+
+   // Lê as idades das irmãs
+    scanf("%d", &idade_cibele);
+    scanf("%d", &idade_fernanda);
+    scanf("%d", &idade_celeste);
+
+    // Determina a idade de Fernanda
+    int idade_final = 0;
+
+    if (idade_cibele < idade_fernanda && idade_fernanda < idade_celeste) {
+        idade_final = idade_fernanda;
+    } else if (idade_fernanda < idade_cibele && idade_cibele < idade_celeste) {
+        idade_final = idade_cibele;
+    } else {
+        idade_final = idade_celeste;
+    }
+
+    // Imprime a idade de Fernanda
+    printf("%d\n", idade_final);
+
+    return 0;
+}

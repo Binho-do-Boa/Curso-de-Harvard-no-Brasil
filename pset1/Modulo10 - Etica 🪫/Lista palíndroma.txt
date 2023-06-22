@@ -1,0 +1,25 @@
+Lista palíndroma
+
+#include <stdio.h>
+
+int main() {
+    int N;
+    scanf("%d", &N);
+
+    int lista[N];
+    for (int i = 0; i < N; i++) {
+        scanf("%d", &lista[i]);
+    }
+
+    int operacoes = 0;
+    for (int i = 0, j = N - 1; i < j; i++, j--) {
+        if (lista[i] != lista[j]) {
+            operacoes++;
+        }
+    }
+
+    printf("%d\n", operacoes);
+
+    return 0;
+}
+

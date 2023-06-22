@@ -1,0 +1,26 @@
+Pressão Pneu
+
+#include <stdio.h>
+
+int main(void) {
+	int pressao_desejada, pressao_lida;
+
+    // Lê a pressão desejada digitada pelo motorista
+    scanf("%d", &pressao_desejada);
+
+    // Lê a pressão lida pela bomba
+    scanf("%d", &pressao_lida);
+
+    // Verifica se as pressões estão dentro das restrições
+    if (1 <= pressao_desejada && pressao_desejada <= 40 && 1 <= pressao_lida && pressao_lida <= 40) {
+        // Calcula a diferença entre as pressões
+        int diferenca = pressao_desejada - pressao_lida;
+
+        // Imprime a diferença
+        printf("%d\n", diferenca);
+    } else {
+        printf("As pressões fornecidas estão fora das restrições.\n");
+    }
+
+	return 0;
+}

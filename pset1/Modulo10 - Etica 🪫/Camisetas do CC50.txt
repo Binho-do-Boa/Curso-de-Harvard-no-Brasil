@@ -1,0 +1,36 @@
+Camisetas do CC50
+
+#include <stdio.h>
+
+int main() {
+    int premiados;
+    scanf("%d", &premiados);
+
+    int tamanhos[premiados];
+    for (int i = 0; i < premiados; i++) {
+        scanf("%d", &tamanhos[i]);
+    }
+
+    int camisetas_pequenas, camisetas_medias;
+    scanf("%d", &camisetas_pequenas);
+    scanf("%d", &camisetas_medias);
+
+    int pequenas_restantes = camisetas_pequenas;
+    int medias_restantes = camisetas_medias;
+
+    for (int i = 0; i < premiados; i++) {
+        if (tamanhos[i] == 1) {
+            pequenas_restantes--;
+        } else {
+            medias_restantes--;
+        }
+    }
+
+    if (pequenas_restantes >= 0 && medias_restantes >= 0) {
+        printf("S\n");
+    } else {
+        printf("N\n");
+    }
+
+    return 0;
+}
